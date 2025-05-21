@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Menú de Deportes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background-color: #0d47a1;
+      color: white;
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .menu {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      width: 80%;
+      max-width: 900px;
+    }
+
+    .menu a {
+      display: block;
+      background-color: #ffffff;
+      border: 2px solid #1976d2;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      font-size: 20px;
+      color: #0d47a1;
+      text-decoration: none;
+      transition: transform 0.2s, background-color 0.3s, color 0.3s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu a:hover {
+      background-color: #1976d2;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #0d47a1;
+      color: white;
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Explora los Deportes</h1>
+  </header>
+
+  <div class="menu">
+    <a href="http://<IP-EC2>:7001" target="_blank">⚽ Fútbol</a>
+    <a href="http://<IP-EC2>:7002" target="_blank">🏀 Basket</a>
+    <a href="http://<IP-EC2>:7003" target="_blank">🎾 Tenis</a>
+    <a href="http://<IP-EC2>:7004" target="_blank">🥊 Boxeo</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Mundo Deportivo - Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
