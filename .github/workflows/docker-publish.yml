@@ -1,4 +1,5 @@
-name: Despliege en Railway
+name: Despliegue en Railway
+
 on:
   push:
     branches:
@@ -18,4 +19,4 @@ jobs:
       - name: Desplegar a Railway
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: npx railway up 
+        run: railway up
