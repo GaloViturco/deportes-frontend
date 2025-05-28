@@ -1,4 +1,4 @@
-name: Despliegue en Railway
+name: Deploy a Railway
 
 on:
   push:
@@ -10,13 +10,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout código
+      - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Instalar Railway CLI moderna
-        run: npm install -g @railway/cli
+      - name: Instalar Railway CLI
+        run: npm install -g @railway/cli@latest
+
+      - name: Verificar que railway.json exista
+        run: |
+          echo "Contenido de railway.json:"
+          cat railway.json
 
       - name: Desplegar a Railway
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: railway up --service deportes-frontend
+        run: railway up
+
