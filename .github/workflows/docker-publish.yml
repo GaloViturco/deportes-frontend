@@ -13,9 +13,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Instalar Railway CLI moderna
-        run: npm install -g railway
+        run: npm install -g @railway/cli@latest
 
       - name: Desplegar a Railway
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: railway up 
+        run: apx railway up 
