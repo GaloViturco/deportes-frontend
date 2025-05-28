@@ -18,4 +18,4 @@ jobs:
       - name: Desplegar a Railway
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: railway up --project 43fa6b8c-d103-4cb3-b366-b805914b11f3 --service deportes-frontend
+        run: railway up 
