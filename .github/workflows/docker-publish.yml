@@ -18,4 +18,4 @@ jobs:
       - name: Desplegar a Railway
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: apx railway up 
+        run: npx railway up 
